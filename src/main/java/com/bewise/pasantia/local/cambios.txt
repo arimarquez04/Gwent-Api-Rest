@@ -1,0 +1,3 @@
+1- Hacer que se elija el jugador que empieza primero cuando se setea el estado EN_CURSO (mas accurate al juego)
+
+URGENTE: Revisar los @OneToOne, @ManyToMany, etc entre PartidaJugador y PartidaRonda!!!!!
