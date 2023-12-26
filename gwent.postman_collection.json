@@ -1,0 +1,554 @@
+{
+	"info": {
+		"_postman_id": "aeec2b5c-ed7c-4d00-860c-acf7f64d8bda",
+		"name": "gwent",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29720241"
+	},
+	"item": [
+		{
+			"name": "Jugador",
+			"item": [
+				{
+					"name": "Traer Jugadores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jugador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jugador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer Jugador por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jugador/15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jugador",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Jugador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n   {\"apodo\":\"Ari\"}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/jugador",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jugador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Jugador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/jugador/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"jugador",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Carta",
+			"item": [
+				{
+					"name": "Traer un carta",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Crear Carta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"sebita\",\r\n    \"fuerza\": 18,\r\n    \"lema\": \"asd\",\r\n    \"posicion\": \"ASEDIO\",\r\n    \"jugadorId\": 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/carta",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carta"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar Carta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/carta/9999",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carta",
+								"9999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer Cartas de un Jugador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/carta?jugadorId=14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carta"
+							],
+							"query": [
+								{
+									"key": "jugadorId",
+									"value": "14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar Carta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n        \"nombre\": \"jaz\",\r\n        \"fuerza\": 100,\r\n        \"lema\": \"asd\",\r\n        \"posicion\": \"ASEDIO\",\r\n        \"jugadorId\": 9\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"12"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Partida",
+			"item": [
+				{
+					"name": "TraerTodasLasPartidas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TraerUnaPartidaPorID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CrearPartida",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida?jugadorUnoId=14&jugadorDosId=15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida"
+							],
+							"query": [
+								{
+									"key": "jugadorUnoId",
+									"value": "14"
+								},
+								{
+									"key": "jugadorDosId",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PrepararCartas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/30/jugador/14/mazo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"30",
+								"jugador",
+								"14",
+								"mazo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TraerLasCartasDeUnJugadorEnPartida",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/2/jugador/14/mazo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"2",
+								"jugador",
+								"14",
+								"mazo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TraerLasCartasQueEstanEnElMazoDeUnJugadorEnPartida",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/15/jugador/14/mazo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"15",
+								"jugador",
+								"14",
+								"mazo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TraerLasCartasQueEstanEnLaBarajaDeUnJugadorEnPartida",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/29/jugador/14/baraja",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"29",
+								"jugador",
+								"14",
+								"baraja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TraerLasCartasQueEstanEnElCementerioDeUnJugadorEnPartida",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/27/jugador/14/cementerio",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"27",
+								"jugador",
+								"14",
+								"cementerio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DescartarUnaCartaDeBaraja",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/{idPartida}/jugador/{idJugador}/baraja?cartaId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"{idPartida}",
+								"jugador",
+								"{idJugador}",
+								"baraja"
+							],
+							"query": [
+								{
+									"key": "cartaId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DescartarDosCartasDeBaraja",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/{idPartida}/jugador/{idJugador}/baraja/?cartaUnoId=&cartaDosId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"{idPartida}",
+								"jugador",
+								"{idJugador}",
+								"baraja",
+								""
+							],
+							"query": [
+								{
+									"key": "cartaUnoId",
+									"value": ""
+								},
+								{
+									"key": "cartaDosId",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NoDescartar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/30/jugador/15/baraja?descartar=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"30",
+								"jugador",
+								"15",
+								"baraja"
+							],
+							"query": [
+								{
+									"key": "descartar",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TirarUnaCartaDeLaBaraja",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/29/jugador/14/baraja/134",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"29",
+								"jugador",
+								"14",
+								"baraja",
+								"134"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JugadorPasaSuTurno",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/partida/29/jugador/14/turno",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"partida",
+								"29",
+								"jugador",
+								"14",
+								"turno"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
